@@ -1,4 +1,4 @@
-﻿using Project_ShoppingApp.Models;
+﻿using Project_ShoppingApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Project_ShoppingApp.ViewModel
+namespace Project_ShoppingApp
 {
     public class LoginViewModel
     {
@@ -35,7 +35,7 @@ namespace Project_ShoppingApp.ViewModel
             {
                 if (string.Equals(loginData.Password, Password))
                 {
-                   // await Navigation.PushModalAsync(new ProductPage());
+                    await Navigation.PushModalAsync(new ProductPage());
                 }
                 else
                 {
@@ -48,6 +48,7 @@ namespace Project_ShoppingApp.ViewModel
             }
         }
 
+
         private void OnRegisterCommand(object obj)
         {
             LoginModel lm = new LoginModel();
@@ -57,4 +58,4 @@ namespace Project_ShoppingApp.ViewModel
             App.Current.MainPage.DisplayAlert("Success", "Registration uccessful", "Ok");
         }
     }
-    }
+}

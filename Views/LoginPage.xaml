@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_ShoppingApp.Views.LoginPage"
-             Title="LoginPage">
+             x:Class="Project_ShoppingApp.LoginPage"
+             Title="NewLoginPage">
     <ContentPage.Content>
         <Grid>
             <Image Source="background.png" VerticalOptions="Fill" Aspect="Fill"/>
@@ -15,22 +15,20 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="User Name" FontSize="17" FontAttributes="Bold" TextColor="White"/>
-            <Frame Grid.Row="1" Grid.Column="0" HeightRequest="50">
-                <Entry TextColor="Black" HeightRequest="48" WidthRequest="200"/>
-
-            </Frame>
-            <Label Grid.Row="2" Text="Password" FontSize="17" FontAttributes="Bold" TextColor="White"/>
-            <Frame Grid.Row="3" HeightRequest="50">
-                <Entry TextColor="Black" IsPassword="True" HeightRequest="48" WidthRequest="200"/>
-
-            </Frame>
-            <Grid Grid.Row="4" Padding="0,40,0,0">
-                <VerticalStackLayout Spacing="20">
-                    <Button Text="Login" Command="{Binding LoginCommand}" TextColor="White" HeightRequest="40" WidthRequest="100" BackgroundColor="#2c363c"/>
-                        <Button Text="Register" Command="{Binding RegisterCommand}" TextColor="White" HeightRequest="40" WidthRequest="100" BackgroundColor="#2c363c"/>
-                </VerticalStackLayout>
-            </Grid>
+                <Label Grid.Row="0" Grid.Column="0" Text="User Name" FontSize="17" FontAttributes="Bold" TextColor="#2C363C"/>
+                <Frame Grid.Row="1" Grid.Column="0" HeightRequest="50">
+                    <Entry  Text="{Binding UserName}" BackgroundColor="White" HeightRequest="48"  WidthRequest="200"/>
+                </Frame>
+                <Label Grid.Row="2" Text="Password" Padding="0,20,0,0" FontAttributes="Bold" FontSize="17" TextColor="#2C363C"/>
+                <Frame Grid.Row="3" HeightRequest="50">
+                    <Entry Text="{Binding Password}" IsPassword="True" BackgroundColor="White" HeightRequest="48"  WidthRequest="200"/>
+                </Frame>
+                <Grid Grid.Row="4" Padding="0,40,0,0">
+                    <VerticalStackLayout Spacing="20">
+                        <Button Text="Login" Command="{Binding LoginCommand}" TextColor="White" BackgroundColor="#2C363C" HeightRequest="40" WidthRequest="100"/>
+                        <Button Text="Register" Command="{Binding RegisterCommand}" TextColor="White" BackgroundColor="#2C363C" HeightRequest="40" WidthRequest="100" />
+                    </VerticalStackLayout>
+                </Grid>
         </Grid>
         </Grid>
     </ContentPage.Content>

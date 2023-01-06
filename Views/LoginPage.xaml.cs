@@ -1,6 +1,6 @@
-using Project_ShoppingApp.ViewModel;
+using Project_ShoppingApp;
 
-namespace Project_ShoppingApp.Views;
+namespace Project_ShoppingApp;
 
 public partial class LoginPage : ContentPage
 {

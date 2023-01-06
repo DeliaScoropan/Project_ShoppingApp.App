@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
-using Project_ShoppingApp.Models;
+using Project_ShoppingApp;
 
-namespace Project_ShoppingApp.Database
+namespace Project_ShoppingApp
 {
     public class LoginDatabase
     {

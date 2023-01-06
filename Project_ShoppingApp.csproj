@@ -59,7 +59,13 @@
 
 	<ItemGroup>
 	  <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.41" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.42" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\DetailPage.xaml.cs">
+	    <DependentUpon>DetailPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>

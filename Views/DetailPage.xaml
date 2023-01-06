@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage  x:Name="DetailsPage" xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_ShoppingApp.Views.DetailPage"
+             x:Class="Project_ShoppingApp.DetailPage"
              Title="DetailPage">
     <ContentPage.Content>
         <Grid RowDefinitions="350,300,150,55" RowSpacing="0" BindingContext="{Binding SelectedItem}">
@@ -21,14 +22,14 @@
                     <Grid RowDefinitions="Auto,Auto,Auto,Auto" Padding="20,45,20,0" >
                         <Label Grid.Row="1" Text="{Binding Name}" FontSize="30" FontAttributes="Bold"/>
                         <Label Grid.Row="2" Text="{Binding Price}" FontSize="25" Padding="0,15" TextColor="#2C363C" FontAttributes="Bold"/>
-                        <Label Grid.Row="3" Text="Huge collection of watches at low offer price and discounts at COD, Easy Returns and Exchanges. Order Now." TextColor="Black"/>
+                        <Label Grid.Row="3" Text="Huge collection of ski products at low offer price and discounts at COD, Easy Returns and Exchanges. Order Now." TextColor="Black"/>
                     </Grid>
                 </Grid>
             </StackLayout>
 
             <BoxView Grid.Row="2" CornerRadius="0,0,50,50" Margin="0,-1,0,0" Color="White" HeightRequest="150" />
 
-            <Button Text="Add to Cart" Grid.Row="2" CornerRadius="20" Command="{Binding Source={x:Reference DetailPage},Path=BindingContext.CartItemclick}" BackgroundColor="#2C363C" Margin="60,40" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Add to Cart" Grid.Row="2" CornerRadius="20" Command="{Binding Source={x:Reference DetailsPage},Path=BindingContext.CartItemclick}" BackgroundColor="#2C363C" Margin="60,40" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"/>
 
         </Grid>
     </ContentPage.Content>

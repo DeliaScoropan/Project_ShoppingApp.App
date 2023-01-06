@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             x:Class="Project_ShoppingApp.Views.CartPage"
+              xmlns:effectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="Project_ShoppingApp.CartPage"
              Title="CartPage">
     <ContentPage.Content>
         <Grid RowDefinitions="Auto,*,Auto,Auto,Auto" ColumnDefinitions="*,Auto" RowSpacing="0" BackgroundColor="#2C363C">

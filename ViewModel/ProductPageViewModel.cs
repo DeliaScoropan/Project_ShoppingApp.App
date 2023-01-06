@@ -1,5 +1,5 @@
-﻿using Project_ShoppingApp.Models;
-using Project_ShoppingApp.Views;
+﻿using Project_ShoppingApp;
+using Project_ShoppingApp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Project_ShoppingApp.ViewModel
+namespace Project_ShoppingApp
 {
     public class ProductPageViewModel
     {
@@ -58,14 +58,15 @@ namespace Project_ShoppingApp.ViewModel
                     Name = "Manusi Ski",
                     Quantity = "1",
                     Price = "$35"
-                }
-               /* new Items
+                },
+                 new Items
                 {
                     Picture="cagula.png",
-                    Name = "Army Watch",
+                    Name = "Polar Ski",
                     Quantity = "1",
-                    Price = "$19"
-                }*/
+                    Price = "$45"
+                }
+
             };
             
             CartItems = new ObservableCollection<Items> { };
@@ -73,7 +74,7 @@ namespace Project_ShoppingApp.ViewModel
             CartItemclick = new Command<Items>(executeCartitemclickcommand);
             this.navigation = navigation;
         }
-        private INavigation navigation;
+      private  INavigation navigation;
 
         async void executeitemclickcommand(Items item)
         {
